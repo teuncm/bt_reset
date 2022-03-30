@@ -6,7 +6,7 @@ for device in $(bluetoothctl devices | grep -o "[[:xdigit:]:]\{8,17\}"); do
 done
 
 # Re-insert into kernel
-sudo modprobe -rw btusb
+sudo modprobe -r btusb
 sudo modprobe btusb
 
 # Re-enable device itself
