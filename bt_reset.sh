@@ -6,8 +6,8 @@ for device in $(bluetoothctl devices | grep -o "[[:xdigit:]:]\{8,17\}"); do
 done
 
 # Re-insert into kernel
-sudo modprobe -r btusb
-sudo modprobe btusb
+modprobe -r btusb
+modprobe btusb
 
 # Re-enable device itself
 rfkill block bluetooth
